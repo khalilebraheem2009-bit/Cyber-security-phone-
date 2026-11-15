@@ -1,0 +1,9 @@
+{% extends "base.html" %}{% block title %}Secure Portal{% endblock %}
+{% block content %}
+<section class="hero">
+  <p class="eyebrow">WELCOME TO YOUR SECURITY WORKSPACE</p>
+  <h1>Explore cybersecurity.<br><em>Build safer habits.</em></h1>
+  <p class="muted">A learning portal for security awareness, defensive reviews, and authorized lab practice.</p>
+  <a class="button" href="{{ url_for('login') }}">Enter portal</a>
+</section>
+{% endblock %}

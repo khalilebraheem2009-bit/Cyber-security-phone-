@@ -1,0 +1,9 @@
+{% extends "base.html" %}{% block title %}Dashboard · Secure Portal{% endblock %}
+{% block content %}
+<div class="heading-row"><div><p class="eyebrow">CONTROL CENTER</p><h1>Cyber Services Hub</h1></div><a class="text-link" href="{{ url_for('logout') }}">LOGOUT ↗</a></div>
+<div class="cards">
+{% for slug, item in services.items() %}
+<a class="service-card" href="{{ url_for('service', slug=slug) }}"><span class="card-icon">⌁</span><h2>{{ item[0] }}</h2><p>{{ item[1] }}</p><span class="text-link">EXPLORE →</span></a>
+{% endfor %}
+</div>
+{% endblock %}
